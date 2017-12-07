@@ -15,4 +15,8 @@ $('.navbar-nav a').click(function(){
     }, 2000);
 });
     
+    if($('bxslider').length > 0){
+        $('.lead-slider').bxslider();
+    };
+    
 });
