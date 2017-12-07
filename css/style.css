@@ -185,7 +185,7 @@ header{
 .newsletter .form-control{
     border-radius: 0;
     border-color:#fff;
-    background: transparent;
+    background: transparent no-repeat right center;
     color:#fff;
 }
 
@@ -206,4 +206,70 @@ header{
 .newsletter button{
     border-radius: 0;
     cursor:pointer;
+}
+
+.animation{
+    visibility: hidden;
+    position: relative;
+    transition: 1s linear;
+}
+@keyframes slideRight{
+    0%{
+        opacity:0;
+        transform:translateX(50%);
+    }
+    100%{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.slideRight{
+    animation-name: slideRight;
+    visibility: visible;
+    animation-duration: 1s;
+}
+
+@keyframes slideRight{
+    0%{
+        opacity:0;
+        transform:translateY(50%);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.slideUp{
+    animation-name: slideUp;
+    visibility: visible;
+    animation-duration: 1s;
+}
+
+.portfolio .portfolio-slider .hover{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5) url('assets/favicon.png') no-repeat center;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease;
+}
+.portfolio .portfolio-slider li:hover .hover{
+    height: 100%;
+}
+
+footer .social a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+footer .social .fa{
+    line-height: 40px;
+    font-size: 26px;
+    color: #fff;
 }

@@ -22,6 +22,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css"/>
         <link href="css/responsive.css" rel="stylesheet" type="text/css"/>
         <link href="css/jquery.bxslider.css" rel="stylesheet" type="text/css"/>
+        <link href="css/owl.carousel.css" rel="stylesheet" type="text/css"/>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -102,7 +103,7 @@
                             </article>
                         </div>
                         <div class="col-md-6">
-                            <figure class="text-center">
+                            <figure class="text-center animation" data-animation="slideLeft">
                                 <img class="img-fluid" src="img/image-3.jpg" alt=""/>
                             </figure>
                         </div>
@@ -114,7 +115,7 @@
                     <h2 class="text-white">Video presentation</h2>
                     <p class="h5 mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <div class="row justify-content-center">
-                        <div class="col-md-10 col-lg-8">
+                        <div class="col-md-10 col-lg-8 animation" data-animation="slideUp">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0wCC3aLXdOw" frameborder="0" allowfullscreen></iframe>
                             </div>
@@ -126,8 +127,8 @@
                 <div class="container">
                     <h2>Meet the team</h2>
                     <p class="h5 mb-5 text-warning">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3 mb-4">
+                    <ul class="owl-carousel team-slider" >
+                        <li>
                             <a href="#" class="d-block text-center">
                                 <figure class="rounded-circle">
                                     <img src="img/team-1.jpg" alt=""/>
@@ -135,8 +136,8 @@
                                 <h3>Jonathan Smit</h3>
                                 <p class="text-warning">Designer</p>
                             </a>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
+                        </li>
+                        <li>
                             <a href="#" class="d-block text-center">
                                 <figure class="rounded-circle">
                                     <img src="img/team-2.jpg" alt=""/>
@@ -144,8 +145,8 @@
                                 <h3>Jonathan Smit</h3>
                                 <p class="text-warning">Designer</p>
                             </a>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
+                        </li>
+                        <li>
                             <a href="#" class="d-block text-center">
                                 <figure class="rounded-circle">
                                     <img src="img/team-3.jpg" alt=""/>
@@ -153,8 +154,8 @@
                                 <h3>Jonathan Smit</h3>
                                 <p class="text-warning">Designer</p>
                             </a>
-                        </div>
-                        <div class="col-md-6 col-lg-3 mb-4">
+                        </li>
+                        <li>
                             <a href="#" class="d-block text-center">
                                 <figure class="rounded-circle">
                                     <img src="img/team-4.jpg" alt=""/>
@@ -162,8 +163,29 @@
                                 <h3>Jonathan Smit</h3>
                                 <p class="text-warning">Designer</p>
                             </a>
-                        </div>
-                    </div>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block text-center">
+                                <figure class="rounded-circle">
+                                    <img src="img/team-4.jpg" alt=""/>
+                                </figure>
+                                <h3>Jonathan Smit</h3>
+                                <p class="text-warning">Designer</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-block text-center">
+                                <figure class="rounded-circle">
+                                    <img src="img/team-4.jpg" alt=""/>
+                                </figure>
+                                <h3>Jonathan Smit</h3>
+                                <p class="text-warning">Designer</p>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    
+                
                 </div>
             </section>
             <section class="parallax d-flex  text-center cover" id="parallax" style="background-image: linear-gradient(to top, rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('img/image-3.jpg')">
@@ -258,7 +280,7 @@
                 <div class="container text-center">
                     <h2 class="text-white">Keep Up To Date</h2>
                     <p class=" mb-4">Subscribe to our mailing list</p>
-                    <form class="contact-form">
+                    <form class="contact-form" method="post" action="">
                         <div class="row justify-content-center">
                             <div class="col-md-3">
                                 <div class="form-group">
@@ -273,7 +295,7 @@
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <button class="btn btn-dark text-white btn-block">Subscribe</button>
+                                <button class="btn btn-dark text-white btn-block" type="submit">Subscribe</button>
                             </div>
 
                         </div>
@@ -283,7 +305,14 @@
         </main>
         <footer class="py-5" style="background-color: #333">
             <div class="container">
-
+                <p class="social">
+                    <a href='#'><span class=" fa fa-facebook"></span></a>
+                    <a href='#'><span class=" fa fa-twiter"></span></a>
+                    <a href='#'><span class=" fa fa-google-plus"></span></a>
+                    <a href='#'><span class=" fa fa-dribble"></span></a>
+                    <a href='#'><span class=" fa fa-instagram"></span></a>
+                </p>
+                <p class="copyright text-center small text-light">Copyright 2017</p><span class="text-warning">Skewed</span>.All rights reserved
             </div>
         </footer>
 
@@ -302,17 +331,18 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="js/bootstrap.min.js"></script>
-        
+        <script src="js/owl.carousel.min.js" type="text/javascript"></script>
          <link href="js/jquery.bxslider.min.css" rel="stylesheet" type="text/css"/>
+         <script src="js/jquery.validate.min.js" type="text/javascript"></script>
         <script src="js/main.js" type="text/javascript"></script>
        
         
         
 
-        <!--<script type="text/javascript">
+        <script type="text/javascript">
             $(document).ready(function () {
                 $(function () {
-                    $("").validate({
+                    $("contact-form").validate({
                         highlight: function (element) {
                             $(element).closest('.form-group').addClass("has-danger");
                             $(element).addClass("form-control-danger");
@@ -325,6 +355,10 @@
                             name: {
                                 required: true,
                                 rangelength: [3, 255]
+                            },
+                            email: {
+                                required: true,
+                                email: true
                             }
 
                         },
@@ -332,6 +366,10 @@
                             name: {
                                 required: "The *Name field is required!",
                                 rangelength: "The *Name must be between 3 and 255 characters!"
+                            },
+                            name: {
+                                required: "The *email field is required!",
+                                rangelength: "Please enter valid email adress"
                             }
                         },
                         errorElement: 'p',
@@ -345,7 +383,7 @@
             //Form Validation
 
 
-        </script>-->
+        </script>
  
     </body>
 </html>
